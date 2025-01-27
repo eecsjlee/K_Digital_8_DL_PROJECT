@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>License Plate Detection Result</title>
+</head>
+<body>
+    <h1>License Plate Detection Result</h1>
+    <h2>Original Image</h2>
+    <img src="{{ original_image_path }}" alt="Original Image" style="max-width:500px;">
+    <h2>Detected License Plate</h2>
+    {% if detected_image_path %}
+    <img src="{{ detected_image_path }}" alt="detected_image_url" style="max-width:500px;">
+    {% else %}
+    <p>No license plate detected.</p>
+    {% endif %}
+    <p>Extracted Text: {{ result }}</p>
+</body>
+</html>
